@@ -20,14 +20,24 @@ def mul(a, b):
 def div(a, b):
     return a / b, a % b
 
-#Power  by JN
-def power(a,b):
+
+# Power  by JN
+def power(a, b):
     return a**b
 
-X = int(input("Enter The First elements:"))
-Y = int(input("Enter The second elements:"))
-print(f"The Added Value = {add(X,Y)}")
-print(f"The subtraction Value = {sub(X,Y)}")
-print(f"The multiplication Value = {mul(X,Y)}")
-print(f"The division Value: quotient = {div(X,Y)[0]} remainder = {div(X,Y)[1]}")
-print("The 1st power of 2nd Value",power(X,Y))
+
+X = int(input("Enter The First elements: "))
+operation = input("Enter the operation to perform: ")
+Y = int(input("Enter The second elements: "))
+if operation == "+":
+    print(f"The Added Value = {add(X,Y)}")
+elif operation == "-":
+    print(f"The subtraction Value = {sub(X,Y)}")
+elif operation == "*":
+    print(f"The multiplication Value = {mul(X,Y)}")
+elif operation == "/":
+    print(f"The division Value: quotient = {div(X,Y)[0]} remainder = {div(X,Y)[1]}")
+elif operation == "^":
+    print(f"The power value = {power(X, Y)}")
+else:
+    print("Invalid operation")
